@@ -1,0 +1,7 @@
+com\example\chambrems\entities\Chambre.class
+com\example\chambrems\entities\TypeChambre.class
+com\example\chambrems\RestController\ChambreRestController.class
+com\example\chambrems\respositories\ChambreRepo.class
+com\example\chambrems\ChambreMsApplication.class
+com\example\chambrems\Services\IChambreService.class
+com\example\chambrems\Services\ChambreServiceImpl.class
