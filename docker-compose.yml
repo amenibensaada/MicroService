@@ -1,5 +1,4 @@
 version: '3'
-
 services:
   mysql-db:
     image: mysql:latest
@@ -12,7 +11,6 @@ services:
       - "3306:3306"
     networks:
       - chambre_network
-
   eureka:
     container_name: eureka
     build: .\Eureka
@@ -24,7 +22,6 @@ services:
       - chambre_network
     environment:
       - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/
-
   chambre:
     container_name: chambre
     image: chambre-ms
@@ -46,7 +43,6 @@ services:
     depends_on:
       - mysql-db
       - eureka
-
   gateway:
     container_name: gateway
     image: gateway-ms
@@ -65,7 +61,6 @@ services:
       - spring.cloud.gateway.routes[0].predicates[0]=Path=/chambre/**
     depends_on:
       - eureka
-
 networks:
   chambre_network:
     driver: bridge
