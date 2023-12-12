@@ -1,0 +1,96 @@
+<app-navbar></app-navbar>
+	<!-- Nav END -->
+<br><br>
+<!-- Header END -->
+
+<!-- **************** MAIN CONTENT START **************** -->
+<main>
+	<section class="p-0 d-flex align-items-center position-relative overflow-hidden">
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 col-lg-6 m-auto">
+					<div class="row my-5">
+						<div class="col-sm-10 col-xl-8 m-auto">
+							<!-- Title -->
+							<span class="mb-0 fs-1">👋</span>
+							<h2 class="fs-2">Connectez-vous à votre compte</h2>
+							<p class="lead mb-4">Ravi de vous voir! Veuillez vous connecter avec votre compte.</p>
+
+							<!-- Form START -->
+							<form [formGroup]="loginForm" (ngSubmit)="login()">
+								<!-- Email -->
+								<div class="mb-4">
+									<label for="exampleInputEmail1" class="form-label">Adresse e-mail *</label>
+									<div class="input-group input-group-lg">
+										<span class="input-group-text bg-light rounded-start border-0 text-secondary px-3"><i class="bi bi-envelope-fill"></i></span>
+										<input type="email" class="form-control border-0 bg-light rounded-end ps-1" placeholder="E-mail" id="exampleInputEmail1" formControlName="email">
+									</div>
+								</div>
+								<!-- Password -->
+								<div class="mb-4">
+									<label for="inputPassword5" class="form-label">Mot de passe *</label>
+									<div class="input-group input-group-lg">
+										<span class="input-group-text bg-light rounded-start border-0 text-secondary px-3"><i class="fas fa-lock"></i></span>
+										<input type="password" class="form-control border-0 bg-light rounded-end ps-1" placeholder="Mot de passe" id="inputPassword5" formControlName="password">
+                                        <span class="input-group-text bg-light rounded-start border-0 text-secondary px-3" onclick="Changer()"><i class="far fa-eye cursor-pointer p-2 w-40px"></i></span>
+									</div>
+								</div>
+								<!-- Check box -->
+								<div class="mb-4 d-flex justify-content-between mb-4">
+									<div class="text-primary-hover">
+										<a routerLink="/forgot-password" class="text-secondary">
+											<u>Mot de passe oublié?</u>
+										</a>
+									</div>
+								</div>
+								<!-- Button -->
+								<div class="align-items-center mt-0">
+									<div class="d-grid">
+										<button class="btn btn-primary mb-0" type="submit">Se connecter</button>
+									</div>
+								</div>
+							</form>
+							<!-- Form END -->
+						</div>
+					</div> <!-- Row END -->
+				</div>
+			</div> <!-- Row END -->
+		</div>
+	</section>
+</main>
+<!-- **************** MAIN CONTENT END **************** -->
+
+<!-- =======================
+Footer START -->
+<footer class="pt-5">
+	<div class="container">
+		<!-- Row START -->
+		<div class="row g-4">
+
+			<!-- Widget 1 START -->
+			<div class="col-lg-12">
+				<!-- logo -->
+
+				<!-- Social media icon -->
+
+			</div>
+			<!-- Widget 1 END -->
+		</div>
+
+		<!-- Divider -->
+		<hr class="mt-4 mb-0">
+
+		<!-- Bottom footer -->
+		<div class="py-3">
+			<div class="container px-0">
+				<div class="d-lg-flex justify-content-center align-items-center py-3 text-center text-md-left">
+					<!-- copyright text -->
+					<div class="text-body text-primary-hover"> Copyrights ©2023 ESPRIT.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- =======================
+Footer END -->

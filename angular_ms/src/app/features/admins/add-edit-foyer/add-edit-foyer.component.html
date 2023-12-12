@@ -1,0 +1,211 @@
+ <!-- <p-dialog header="{{modalType }}"[(visible)]="displayModel" [style]="{ width: '50vw' }" (onHide)="closeModel()">
+
+  <form [formGroup]="foyerform" >
+  <input type="number" formControlName="idFoyer" [hidden]="true"/>
+
+  <div class="field" class="foyer_form">
+    <label class="block" for="nomFoyer">Nom Foyer : </label>
+    <input type="text" pInputText  id="nomFoyer" formControlName="nomFoyer"/>
+     <small class="p-error block" *ngIf="foyerform.controls['nomFoyer'].invalid && (foyerform.controls['nomFoyer'].touched||foyerform.controls['nomFoyer'].dirty)">ce champ est obligatoire</small>
+
+    </div>
+  <div class="field" >
+    <label class="block" for="capaciteFoyer">Capacite : </label>
+    <p-inputNumber id="capaciteFoyer" formControlName="capaciteFoyer"></p-inputNumber>
+    <small class="p-error block" *ngIf="foyerform.controls['capaciteFoyer'].invalid && (foyerform.controls['capaciteFoyer'].touched||foyerform.controls['capaciteFoyer'].dirty)">ce champ est obligatoire</small>
+
+  </div>
+
+  <div class="field" class="foyer_form">
+    <label class="block" for="gerants"> Gérants: </label>
+    <input type="text" pInputText id="gerants"  formControlName="gerants"/>
+    <small class="p-error block" *ngIf="foyerform.controls['gerants'].invalid && (foyerform.controls['gerants'].touched||foyerform.controls['gerants'].dirty)">ce champ est obligatoire</small>
+
+  </div>
+  <div class="field" class="foyer_form">
+    <label class="block" for="adresse">Adresse : </label>
+    <input type="text" pInputText  id="adresse" formControlName="adresse"/>
+    <small class="p-error block" *ngIf="foyerform.controls['adresse'].invalid && (foyerform.controls['adresse'].touched||foyerform.controls['adresse'].dirty)">ce champ est obligatoire</small>
+
+  </div>
+  <div class="field">
+    <label class="block" for="fillesougarcons">Fille ou Garcon : </label> -->
+    <!-- <input type="text" pInputText formControlName="fillesougarcons" /> -->
+    <!-- <p-selectButton [options]="stateOptions" optionLabel="label" optionValue="value" formControlName="fillesougarcons"  id="fillesougarcons"></p-selectButton>
+  </div>
+
+  <div class="field" class="foyer_form">
+    <label class="block" for="contact">Contact : </label>
+    <input type="text" pInputText id="contact" formControlName="contact" />
+    <small class="p-error block" *ngIf="foyerform.controls['contact'].invalid && (foyerform.controls['contact'].touched||foyerform.controls['contact'].dirty)">ce champ est obligatoire</small>
+
+  </div>
+  <div class="field" class="foyer_form">
+    <label class="block" for="photo">Image : </label>
+    <input type="text" pInputText id="photo" formControlName="photo" />
+    <small class="p-error block" *ngIf="foyerform.controls['photo'].invalid && (foyerform.controls['photo'].touched||foyerform.controls['photo'].dirty)">ce champ est obligatoire</small>
+
+  </div>
+  <div class="field" class="foyer_form">
+    <label class="block" for="pointgoogle">Point Google : </label>
+    <input type="text" pInputText  id="pointgoogle" formControlName="pointgoogle"/>
+    <small class="p-error block" *ngIf="foyerform.controls['pointgoogle'].invalid && (foyerform.controls['pointgoogle'].touched||foyerform.controls['pointgoogle'].dirty)">ce champ est obligatoire</small>
+
+  </div>
+</form>
+  <ng-template pTemplate="footer">
+    <p-button icon="pi pi-times"  (click)="closeModel()" label="Annuler" styleClass="p-button-text"></p-button>
+    <p-button  icon="pi pi-plus" (click)="addFoyer()" label="{{modalType}}" [disabled]="foyerform.invalid"></p-button>
+
+</ng-template>
+
+</p-dialog> -->
+
+<!-- <div class="fixed z-10 inset-0 overflow-y-auto" *ngIf="displayModel"   [(visible)]="displayModel">
+  <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+    <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+      <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+    </div>
+
+    <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+    <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+      <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+        <form [formGroup]="foyerform" class="space-y-4">
+         Vos champs de formulaire ici
+        </form>
+      </div>
+ -->
+      <!-- <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+        <button type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-300 sm:ml-3 sm:w-auto sm:text-sm" (click)="addFoyer()" [disabled]="foyerform.invalid">
+          {{modalType}}
+        </button>
+        <button type="button" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:ring focus:border-blue-300 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm" (click)="closeModel()">
+          Annuler
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+ -->
+ <!-- Replacez la classe primeng p-dialog par des styles Tailwind -->
+
+
+
+
+
+
+
+
+ <div class="popup-container" *ngIf="displayModel">
+  <div class="popup-content">
+<div  class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75" (onHide)="closeModel()" >
+  <div class="bg-white dark:bg-gray-900 w-1/2 p-8 rounded-lg shadow-lg"  >
+    <!-- Contenu du dialogue ici -->
+    <h3 class="text-lg font-semibold mb-4">{{ modalType }}</h3>
+    <form [formGroup]="foyerform"      class="grid grid-cols-2 gap-4">
+      <input type="number" formControlName="idFoyer" hidden />
+
+      <div class="foyer_form"  >
+        <label class="block" for="nomFoyer">Nom Foyer :</label>
+        <input type="text" id="nomFoyer" formControlName="nomFoyer" class="p-inputtext border rounded p-2 w-full" />
+        <!-- <small class="p-error block text-red-500" *ngIf="foyerform.controls['nomFoyer'].invalid && (foyerform.controls['nomFoyer'].touched || foyerform.controls['nomFoyer'].dirty)"></small> -->
+
+        <small class="p-error block text-red-500" *ngIf="nomFoyer.invalid && (nomFoyer.touched || nomFoyer.dirty)">
+          <small *ngIf="nomFoyer.errors!['required']">Ce champ est obligatoire</small>
+        </small>
+      </div>
+
+      <div>
+        <label class="block" for="capaciteFoyer">Capacité :</label>
+        <input type="number" id="capaciteFoyer" formControlName="capaciteFoyer" class="border rounded p-2 w-full"/>
+        <small class="p-error block text-red-500" *ngIf="capaciteFoyer.invalid && (capaciteFoyer.touched || capaciteFoyer.dirty)">
+          <small *ngIf="capaciteFoyer.errors!['required']">Ce champ est obligatoire</small>
+        </small>
+            </div>
+
+      <div class="foyer_form">
+        <label class="block" for="gerants">Gérants :</label>
+        <input type="text" id="gerants" formControlName="gerants" class="p-inputtext border rounded p-2 w-full" />
+        <small class="p-error block text-red-500" *ngIf="gerants.invalid && (gerants.touched || gerants.dirty)">
+          <small *ngIf="gerants.errors!['required']">Ce champ est obligatoire</small>
+        </small>      </div>
+
+      <div class="foyer_form">
+        <label class="block" for="adresse">Adresse :</label>
+        <input type="text" id="adresse" formControlName="adresse" class="p-inputtext border rounded p-2 w-full" />
+        <small class="p-error block text-red-500" *ngIf="adresse.invalid && (adresse.touched || adresse.dirty)">
+          <small *ngIf="adresse.errors!['required']">Ce champ est obligatoire</small>
+        </small>       </div>
+
+      <div>
+        <label class="block" for="fillesougarcons">Fille ou Garçon :</label>
+        <!-- Utiliser un input de texte ou sélection de bouton selon vos besoins -->
+        <select formControlName="fillesougarcons" id="fillesougarcons" class="border rounded p-2 w-full">
+          <option disabled selected value="">Sélectionnez une option</option>
+          <option *ngFor="let option of stateOptions" [value]="option.value">{{ option.label }}</option>
+        </select>
+        <small class="p-error block text-red-500" *ngIf="fillesougarcons.invalid && (fillesougarcons.touched || fillesougarcons.dirty)">
+          <small *ngIf="fillesougarcons.errors!['required']">Ce champ est obligatoire</small>
+        </small>
+        </div>
+
+      <div class="foyer_form">
+        <label class="block" for="contact">Contact :</label>
+        <input type="text" id="contact" formControlName="contact" class="p-inputtext border rounded p-2 w-full" />
+        <!-- <small class="p-error block text-red-500" *ngIf="foyerform.controls['contact'].invalid && (foyerform.controls['contact'].touched || foyerform.controls['contact'].dirty)">Ce champ est obligatoire</small> -->
+
+        <!-- <small class="p-error block" *ngIf="foyerform.get('contact')?.hasError('pattern') && (foyerform.get('contact')?.touched || foyerform.get('contact')?.dirty)">
+          Veuillez entrer uniquement des chiffres
+        </small> -->
+        <small class="p-error block text-red-500" *ngIf="contact.invalid && (contact.touched || contact.dirty)">
+          <small *ngIf="contact.errors!['required']">Ce champ est obligatoire</small>
+          <small *ngIf="contact.errors!['pattern']"> Veuillez entrer uniquement des chiffres  commence par +216N°</small>
+
+        </small>
+
+
+        </div>
+
+      <div class="foyer_form">
+        <label class="block" for="photo">Image :</label>
+        <input type="text" id="photo" formControlName="photo" class="p-inputtext border rounded p-2 w-full" />
+        <!-- <small class="p-error block text-red-500" *ngIf="foyerform.controls['photo'].invalid && (foyerform.controls['photo'].touched || foyerform.controls['photo'].dirty)">Ce champ est obligatoire</small> -->
+        <small class="p-error block text-red-500" *ngIf="photo.invalid && (photo.touched || photo.dirty)">
+          <small *ngIf="photo.errors!['required']">Ce champ est obligatoire</small>
+        </small>
+
+      </div>
+
+      <!-- <div class="field" class="foyer_form">
+        <label class="block" for="photo">Image : </label>
+        <input type="file" pFileUpload mode="basic" id="photo" formControlName="photo" (change)="handleFileInput($event)" /> -->
+        <!-- <small class="p-error block" *ngIf="foyerform.controls['photo'].invalid && (foyerform.controls['photo'].touched || foyerform.controls['photo'].dirty)">
+          Ce champ est obligatoire
+        </small> -->
+
+
+      <!-- </div> -->
+
+
+      <div class="foyer_form">
+        <label class="block" for="pointgoogle">Point Google :</label>
+        <input type="text" id="pointgoogle" formControlName="pointgoogle" class="p-inputtext border rounded p-2 w-full" />
+        <!-- <small class="p-error block text-red-500" *ngIf="foyerform.controls['pointgoogle'].invalid && (foyerform.controls['pointgoogle'].touched || foyerform.controls['pointgoogle'].dirty)">Ce champ est obligatoire</small> -->
+        <small class="p-error block text-red-500" *ngIf="pointgoogle.invalid && (pointgoogle.touched || pointgoogle.dirty)">
+          <small *ngIf="pointgoogle.errors!['required']">Ce champ est obligatoire</small>
+        </small>
+      </div>
+    </form>
+
+    <div class="flex justify-end mt-4">
+      <button type="button" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2" (click)="closeModel()"    ><i class="bi bi-ban"></i>
+        </button>
+
+      <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" (click)="addFoyer()" [disabled]="foyerform.invalid"><i class="bi bi-arrow-counterclockwise"></i>{{ modalType }}</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+

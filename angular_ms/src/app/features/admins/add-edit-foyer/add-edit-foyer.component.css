@@ -1,0 +1,60 @@
+
+@import 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css';
+
+/* :host>>> .foyer_form .p-component{
+  width: 100%;
+} */
+.content-div{margin: 100px;}
+
+:host .foyer_form .p-component {
+  width: 100%;
+}
+
+
+.popup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+  margin: 50%; /* Ajoute une marge de 20px autour du div */
+}
+
+
+/* .popup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+  /* z-index: 1000;
+} */
+
+/* .popup-content { */
+ /*  background: #fff; background color of the popup */
+  /* padding: 100px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+ /* max-width: 700px;  adjust as needed */
+  /* width: 100%; */
+  /* top: 20px; Ajoute une marge de 20px en haut
+  bottom: 20px;
+}*/

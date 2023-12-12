@@ -1,0 +1,225 @@
+<aside id="logo-sidebar"
+  class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-gray-700 border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+  aria-label="Sidebar">
+  <div class="h-full px-3 pb-4 overflow-y-auto bg-gray-700 dark:bg-gray-800">
+    <ul class="space-y-2 font-medium">
+
+      <li>
+        <a routerLink="/admin"
+          class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <svg
+            class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
+            <path
+              d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
+          </svg>
+          <span class="flex-1 ms-3 whitespace-nowrap" routerLink="/admin">Home</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/admin/chambre"
+          class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <svg
+            class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="m17.418 3.623-.018-.008a6.713 6.713 0 0 0-2.4-.569V2h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2H9.89A6.977 6.977 0 0 1 12 8v5h-2V8A5 5 0 1 0 0 8v6a1 1 0 0 0 1 1h8v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h6a1 1 0 0 0 1-1V8a5 5 0 0 0-2.582-4.377ZM6 12H4a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Z" />
+          </svg>
+          <span class="flex-1 ms-3 whitespace-nowrap" routerLink="/admin/chambre">Chambre</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/admin/etudiant"
+          class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <svg
+            class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+            <path
+              d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
+          </svg>
+          <span class="flex-1 ms-3 whitespace-nowrap" routerLink="/admin/etudiant">Etudiant</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/admin/bloc"
+          class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <svg
+            class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+            <path
+              d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z" />
+          </svg>
+          <span class="flex-1 ms-3 whitespace-nowrap" routerLink="/admin/bloc">Bloc</span>
+        </a>
+      </li>
+      <li>
+        <a href="/admin/foyer"
+          class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <svg
+            class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+            <path
+              d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z" />
+          </svg>
+          <span class="flex-1 ms-3 whitespace-nowrap" routerLink="/admin/foyer">Foyer</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/admin/universite"
+          class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <svg
+            class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+            <path
+              d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z" />
+          </svg>
+          <span class="flex-1 ms-3 whitespace-nowrap" routerLink="/admin/universite">Universite</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/admin/reservation"
+          class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <svg
+            class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+            <path
+              d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z" />
+          </svg>
+          <span class="flex-1 ms-3 whitespace-nowrap" routerLink="/admin/reservation">Réservation</span>
+        </a>
+      </li>
+
+
+    </ul>
+  </div>
+</aside>
+
+<div class="ml-72">
+  <div class="content-div mx-auto flex items-center">
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <div class="container">
+
+        <div class="card bg-transparent">
+
+          <!-- Card header START -->
+          <div class="card-header bg-transparent border-bottom px-0">
+            <!-- Search and select START -->
+            <div class="row g-3 align-items-center justify-content-between">
+
+              <!-- Search bar -->
+              <div class="col-md-8">
+                <form class="rounded position-relative">
+                  <input class="form-control bg-transparent" [(ngModel)]="rechercheEtudiant" name="rechercheEtudiant"
+                    type="search" placeholder="Entrez le numéro de carte d'identité nationale de l'étudiant"
+                    aria-label="Search">
+                  <button
+                    class="bg-transparent p-2 position-absolute top-50 end-0 translate-middle-y border-0 text-primary-hover text-reset"
+                    type="submit">
+                    <i class="fas fa-search fs-6 "></i>
+                  </button>
+                </form>
+              </div>
+
+            </div>
+            <!-- Search and select END -->
+          </div>
+          <!-- Card header END -->
+
+          <!-- Card body START -->
+          <div class="card-body px-0">
+
+            <!-- Tabs content START -->
+            <div class="tab-content">
+
+              <!-- Tabs content item START -->
+              <div class="tab-pane fade show active">
+                <div class="row g-4">
+
+                  <!-- Card item START -->
+                  <div class="col-md-6 col-xxl-4" *ngFor="let etudiant of listEtudiant ">
+                    <div class="card bg-transparent border h-100">
+                      <!-- Card header -->
+                      <div class="card-header bg-transparent border-bottom d-flex justify-content-between">
+                        <div class="d-sm-flex align-items-center">
+                          <!-- Avatar -->
+                          <div class="avatar avatar-md flex-shrink-0">
+                            <img class="avatar-img rounded-circle border border-white border-3 shadow"
+                              src="http://localhost:8090/GestionFoyer/auth/{{etudiant.image}}" alt="avatar"
+                              style="width: 100px; height: 100px;">
+                          </div>
+                          <!-- Info -->
+                          <div class="ms-0 ms-sm-2 mt-2 mt-sm-0">
+                            <h5 class="mb-0">{{etudiant.nom}} {{etudiant.prenom}}</h5>
+                            <span class="text-body small"><i
+                                class="fas fa-envelope me-1 mt-1"></i>{{etudiant.email}}</span>
+                          </div>
+                        </div>
+
+                        <!-- Edit dropdown -->
+                        <div class="dropdown text-end">
+                          <a href="#" class="btn btn-sm btn-light btn-round small mb-0" role="button"
+                            id="dropdownShare2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-three-dots fa-fw"></i>
+                          </a>
+                          <!-- dropdown button -->
+                          <ul class="dropdown-menu dropdown-w-sm dropdown-menu-end min-w-auto shadow rounded"
+                            aria-labelledby="dropdownShare2">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-trash fa-fw me-2"></i>Remove</a></li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="card-body">
+                        <!-- Payments -->
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                          <div class="d-flex align-items-center">
+                            <div class="icon-md bg-success bg-opacity-10 text-success rounded-circle flex-shrink-0"><i
+                                class="fas fa-address-card fa-fw"></i></div>
+                            <h6 class="mb-0 ms-2 fw-light">Carte d'identité nationale</h6>
+                          </div>
+                          <span class="mb-0 fw-bold">{{etudiant.cin}}</span>
+                        </div>
+
+                        <!-- Total courses -->
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                          <div class="d-flex align-items-center">
+                            <div class="icon-md bg-purple bg-opacity-10 text-purple rounded-circle flex-shrink-0"><i
+                                class="fas fa-book fa-fw"></i></div>
+                            <h6 class="mb-0 ms-2 fw-light">Université</h6>
+                          </div>
+                          <span class="mb-0 fw-bold">{{etudiant.universite.nomUniversite}}</span>
+                        </div>
+
+                      </div>
+
+                      <!-- Card footer -->
+                      <div class="card-footer bg-transparent border-top">
+                        <div class="d-sm-flex justify-content-between align-items-center">
+                          <!-- Rating star -->
+                          <h6 class="mb-2 mb-sm-0">
+                            <i class="bi bi-calendar fa-fw text-orange me-2"></i><span class="text-body">Date de
+                              naissance:</span> {{etudiant.dateNaissance}}
+                          </h6>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card item END -->
+
+                </div>
+              </div>
+              <!-- Tabs content item END -->
+
+
+            </div>
+            <!-- Tabs content END -->
+          </div>
+          <!-- Card body END -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

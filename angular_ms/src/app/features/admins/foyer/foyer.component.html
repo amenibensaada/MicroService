@@ -1,0 +1,282 @@
+<aside id="logo-sidebar"
+  class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-gray-700 border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+  aria-label="Sidebar">
+  <div class="h-full px-3 pb-4 overflow-y-auto bg-gray-700 dark:bg-gray-800">
+    <ul class="space-y-2 font-medium">
+
+      <li>
+        <a routerLink="/admin"
+          class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <svg
+            class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
+            <path
+              d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
+          </svg>
+          <span class="flex-1 ms-3 whitespace-nowrap" routerLink="/admin" >Home</span>
+        </a>
+      </li>
+      <li>
+        <a  routerLink="/admin/chambre"
+          class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <svg
+            class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="m17.418 3.623-.018-.008a6.713 6.713 0 0 0-2.4-.569V2h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2H9.89A6.977 6.977 0 0 1 12 8v5h-2V8A5 5 0 1 0 0 8v6a1 1 0 0 0 1 1h8v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h6a1 1 0 0 0 1-1V8a5 5 0 0 0-2.582-4.377ZM6 12H4a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Z" />
+          </svg>
+          <span class="flex-1 ms-3 whitespace-nowrap"  routerLink="/admin/chambre" >Chambre</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/admin/etudiant"
+          class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <svg
+            class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+            <path
+              d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
+          </svg>
+          <span class="flex-1 ms-3 whitespace-nowrap" routerLink="/admin/etudiant">Etudiant</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/admin/bloc"
+          class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <svg
+            class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+            <path
+              d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z" />
+          </svg>
+          <span class="flex-1 ms-3 whitespace-nowrap" routerLink="/admin/bloc">Bloc</span>
+        </a>
+      </li>
+      <li>
+        <a href="/admin/foyer"
+          class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <svg
+            class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+            <path
+              d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z" />
+          </svg>
+          <span class="flex-1 ms-3 whitespace-nowrap" routerLink="/admin/foyer">Foyer</span>
+        </a>
+      </li>
+      <li>
+        <a  routerLink="/admin/universite"
+          class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <svg
+            class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+            <path
+              d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z" />
+          </svg>
+          <span class="flex-1 ms-3 whitespace-nowrap" routerLink="/admin/universite">Universite</span>
+        </a>
+      </li>
+      <li>
+        <a  routerLink="/admin/reservation"
+          class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <svg
+            class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+            <path
+              d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z" />
+          </svg>
+          <span class="flex-1 ms-3 whitespace-nowrap" routerLink="/admin/reservation">Réservation</span>
+        </a>
+      </li>
+
+
+    </ul>
+  </div>
+</aside>
+
+<div class="ml-72">
+  <div class="content-div mx-auto flex items-center">
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <div class="container">
+
+        <div class="flex items-center justify-between flex-wrap pb-4 bg-white dark:bg-gray-900">
+          <!-- <form  #f="ngForm" (ngSubmit)="search(f)" class="flex items-center space-x-4">
+            <label for="searchtext">chercher un Foyer :</label>
+            <input type="text" id="searchtext" name="searchtext" [(ngModel)]="searchtext" >
+            <input type="submit" class="btn btn-primary" />
+          </form> -->
+          <form #f="ngForm" (ngSubmit)="search()" class="flex items-center space-x-4">
+            <label for="searchtext" class="text-gray-700">Chercher un Foyer :</label>
+            <input type="text" id="searchtext" name="searchtext" [(ngModel)]="searchtext" class="border rounded p-2 focus:outline-none focus:border-blue-500">
+            <input type="submit" class=" bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-full"  [disabled]="f.invalid" >
+          </form>
+
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" type="button" (click)="showAddModel()">
+            <i class="bi bi-building-fill-add"></i> Ajouter Foyer
+          </button>
+        </div>
+
+       <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+        *ngIf="listFiltred.length > 0">
+        <thead class="text-xs text-gray-700 uppercase bg-pink-50 dark:bg-pink-700 dark:text-gray-400">
+          <tr>
+
+            <th scope="col" class="px-6 py-3">Nom</th>
+            <th scope="col" class="px-6 py-3">Gérants</th>
+            <th scope="col" class="px-6 py-3">Capacité</th>
+            <th scope="col" class="px-6 py-3">Adresse</th>
+            <th scope="col" class="px-6 py-3">Fille Ou Garcon</th>
+            <th scope="col" class="px-6 py-3">contact</th>
+            <th scope="col" class="px-6 py-3">photo</th>
+            <th scope="col" class="px-6 py-3">pointgoogle</th>
+            <th scope="col" class="px-6 py-3">Action</th>
+
+
+          </tr>
+
+
+        </thead>
+        <tbody>
+          <tr *ngFor="let listFiltred of listFiltredPage"
+            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <td class="px-6 py-4">
+              <div class="text-base font-semibold">
+                {{ listFiltred.nomFoyer }}
+              </div>
+            </td>
+            <td class="px-6 py-4">
+              <div class="text-base font-semibold">
+                {{ listFiltred.gerants }}
+              </div>
+            </td>
+            <td class="px-6 py-4">
+              <div class="text-base font-semibold">
+                {{ listFiltred.capaciteFoyer }}
+              </div>
+            </td>
+            <td class="px-6 py-4">
+              <div class="text-base font-semibold">
+                {{ listFiltred.adresse }}
+              </div>
+            </td>
+            <td class="px-6 py-4">
+              <div class="text-base font-semibold">
+                {{ listFiltred.fillesougarcons }}
+              </div>
+            </td>
+            <td class="px-6 py-4">
+              <div class="text-base font-semibold">
+                {{ listFiltred.contact }}
+              </div>
+            </td>
+            <td class="px-6 py-4">
+              <div class="text-base font-semibold">
+                {{ listFiltred.photo }}
+              </div>
+            </td>
+            <td class="px-6 py-4">
+              <div class="text-base font-semibold">
+                {{ listFiltred.pointgoogle }}
+              </div>
+            </td>
+            <td class="px-6 py-4">
+              <div class="text-base font-semibold mb-4">
+                <div class="flex space-x-4">
+                  <button type="button" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full"
+                    (click)="showeditFoyer(listFiltred)">
+                    <i class="bi bi-pencil-square"></i>
+                  </button>
+
+                  <button type="button" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
+                    (click)="deleteFoyer(listFiltred)" >
+                    <i class="bi bi-trash-fill"></i>
+                    <div appCrudToastDirective [crudAction]="toastAction"></div>
+                  </button>
+
+
+                  <!-- <div *ngIf="showAffecterChamp" class="mb-4">
+                    <label for="nomBloc">Nom du Bloc :</label>
+                    <input type="text" id="nomBloc" [(ngModel)]="nomBloc" (click)="AffecterFoyer(listFiltred)"/>
+                    Autres champs ou boutons associés au processus d'affectation
+                  </div> -->
+
+                  <button type="button" class="bg-violet-500 hover:bg-violet-700 text-white font-bold py-2 px-4 rounded-full"
+                  (click)="openModal()">
+                    <i class="bi bi-puzzle-fill"></i>
+                  </button>
+                </div>
+
+
+              </div>
+
+
+            </td>
+          </tr>
+        </tbody>
+       </table>
+       <div class="mt-4">
+        <ul class="pagination">
+          <li class="page-item" [class.disabled]="currentPage === 1">
+            <a class="page-link" href="#" (click)="changePage(currentPage - 1, $event)">Previous</a>
+          </li>
+          <li class="page-item" *ngFor="let page of getPages()">
+            <a class="page-link" href="#" (click)="changePage(page, $event)">{{ page }}</a>
+          </li>
+          <li class="page-item" [class.disabled]="currentPage === getTotalPages()">
+            <a class="page-link" href="#" (click)="changePage(currentPage + 1, $event)">Next</a>
+          </li>
+        </ul>
+      </div>
+
+
+
+
+
+     <app-add-edit-foyer [displayModel]="displayModel" [selectedFoyer]="selectedFoyer" (clickclose)="hideAddModel($event)"
+      (addItemEvent)="CalledAPIList($event)"  ></app-add-edit-foyer>
+
+      <div class="fixed inset-0 z-50 overflow-auto" *ngIf="showAffecterChamp">
+        <div class="flex items-center justify-center min-h-screen">
+          <div class="bg-gray-900 bg-opacity-90 h-full ">
+
+            <!-- Modal content -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-xl max-w-md mx-auto p-4">
+              <div class="modal-header">
+                <h5 class="modal-title text-lg font-bold">Affecter</h5>
+                <button type="button" class="btn-close" (click)="closeModal()"></button>
+              </div>
+              <div class="modal-body">
+                <!-- Contenu de la modal -->
+                <div class="mb-4">
+                  <form #myForm="ngForm" (ngSubmit)="validerAffectation()" (ngSubmit)="validerAffectation()">
+                  <label for="nomBloc" class="block text-sm font-medium text-gray-700">Nom du Bloc :</label>
+                  <input type="text" id="nomBloc" name="nomBloc" [(ngModel)]="nomBloc" class="mt-1 p-2 border rounded-md w-full" placeholder="Attribuer un bloc en saisissant son nom" required>
+
+                  <div *ngIf="myForm.controls['nomBloc'].hasError('required') && myForm.submitted " class="text-red-500 text-sm mt-1">
+                    Le champ "Nom du Bloc" est obligatoire.
+                  </div>
+
+                  <label for="nomBloc" class="block text-sm font-medium text-gray-700">Nom du Foyer :</label>
+                  <input type="text" id="nomFoyer"   id="nomFoyer" name="nomFoyer"  [(ngModel)]="nomFoyer" class="mt-1 p-2 border rounded-md w-full" placeholder="Attribuer un Foyer en saisissant son nom" required>
+
+                  <div *ngIf="myForm.controls['nomFoyer'].hasError('required') && myForm.submitted" class="text-red-500 text-sm mt-1">
+                    Le champ "Nom du Foyer" est obligatoire.
+
+                </div>
+                  <!-- Autres champs ou boutons associés au processus d'affectation -->
+                  <button  type="submit" class=" mt-4 bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full"><i class="bi bi-back"></i>Valider
+                  </button>
+
+                  <button (click)="closeModal()" class=" mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"><i class="bi bi-ban"></i>   <div appCrudToastDirective [crudAction]="toastAction1"></div> </button>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+

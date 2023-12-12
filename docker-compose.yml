@@ -70,7 +70,18 @@ services:
       - MONGODB_URL=mongodb://mongodb:27017/reservation
     depends_on:
       - mongodb
-      # - eureka
+  angular:
+    container_name: angular
+    image: angular-ms
+    build:
+      context: .\angular_ms
+    restart: always
+    ports:
+      - "3500:80"
+    networks:
+      - chambre_network
+    depends_on:
+      - gateway     
 
   gateway:
     container_name: gateway

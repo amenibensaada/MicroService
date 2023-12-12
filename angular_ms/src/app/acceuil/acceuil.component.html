@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="">BOOK4STUDENTS</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+        <li><a  class="getstarted" routerLink="/login">login</a></li>
+
+        <li><a  class="getstarted" routerLink="/sign-up">SignUp</a></li>
+      </ul>
+
+
+
+      </nav>
+
+    </div>
+  </header>
+  <section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+
+        <div class="carousel-item active" style="background-image: url(assets/slide/slide-1.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>BOOK4STUDENTS</span></h2>
+              <p class="animate__animated animate__fadeInUp">Desannonces de chambres à louer chez BOOK4STUDENTS pour les etudiants, Trouvez des locations partout dans le campus!</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto" routerLink="/login">Reservez Maintenant</a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+<app-chambre-form
+  [image]="image"
+  [titre]="title"
+  [buttonText]="buttonText"
+  [roomNum]="formData.numeroChambre"
+  [typeRoom]="formData.typeC"
+  [formData]="formData"
+  (submitForm)="addRoom($event)"
+></app-chambre-form>
