@@ -45,7 +45,6 @@ export class EtudiantProfileComponent implements OnInit {
   ngOnInit(): void {
     this.userconnect;
     this.getOneEtudiant();
-    this.getAllUniversites();
   }
 
   getOneEtudiant() {
@@ -60,7 +59,7 @@ export class EtudiantProfileComponent implements OnInit {
           image: this.etudiant.image,
           email: this.etudiant.email,
           cin: this.etudiant.cin,
-          universite: this.etudiant.universite.idUniversite,
+          //  universite: this.etudiant.universite.idUniversite,
           dateNaissance: this.formatDateNaissance(this.etudiant.dateNaissance),
         });
       });
@@ -78,14 +77,6 @@ export class EtudiantProfileComponent implements OnInit {
       console.error('Unexpected date format', date);
       return ''; // or some default value
     }
-  }
-
-  getAllUniversites() {
-    this.universiteService
-      .getAllUniversites()
-      .subscribe((data: Universite[]) => {
-        this.listUniversite = data;
-      });
   }
 
   updateEtudiant() {
@@ -106,7 +97,7 @@ export class EtudiantProfileComponent implements OnInit {
           localStorage.setItem('userconnect', JSON.stringify(res));
           setTimeout(() => {
             window.location.href =
-              'http://localhost:4200/etudiant/etudiant-profile';
+              'http://localhost:3500/etudiant/etudiant-profile';
           }, 3000);
         },
         (error) => {
@@ -151,7 +142,7 @@ export class EtudiantProfileComponent implements OnInit {
           localStorage.setItem('userconnect', JSON.stringify(res));
           setTimeout(() => {
             window.location.href =
-              'http://localhost:4200/etudiant/etudiant-profile';
+              'http://localhost:3500/etudiant/etudiant-profile';
           }, 1000);
         },
         (error) => {
@@ -194,7 +185,7 @@ export class EtudiantProfileComponent implements OnInit {
         localStorage.setItem('userconnect', JSON.stringify(res));
         setTimeout(() => {
           window.location.href =
-            'http://localhost:4200/etudiant/etudiant-profile';
+            'http://localhost:3500/etudiant/etudiant-profile';
         }, 750);
       },
       (err) => {

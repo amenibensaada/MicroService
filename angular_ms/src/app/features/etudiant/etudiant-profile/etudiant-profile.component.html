@@ -18,7 +18,7 @@
                       <span class="avatar avatar-xl">
                           <img id="uploadfile-1-preview"
                               class="avatar-img rounded-circle border border-white border-3 shadow"
-                              src="http://localhost:8090/GestionFoyer/auth/{{userconnect.image}}"
+                              src="http://localhost:8090/auth/{{userconnect.image}}"
                                      alt=""
                                      style="width: 100px; height: 100px;">
                               
@@ -52,12 +52,7 @@
               <input class="form-control" type="date" formControlName="dateNaissance">
           </div>
 
-          <div class="col-md-6">
-              <label class="form-label">Université</label>
-              <select class="form-select" id="exampleInputEcole" formControlName="universite">
-                  <option *ngFor="let universite of listUniversite" [value]="universite.idUniversite">{{ universite.nomUniversite }}</option>
-              </select>
-          </div>
+       
 
           <!-- Email id -->
           <div class="col-md-6">

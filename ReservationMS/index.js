@@ -13,8 +13,8 @@ const eurekaHost = process.env.EUREKA_CLIENT_SERVICEURL_DEFAULTZONE || 'eureka';
 const client = new Eureka({
   instance: {
     app: 'reservation',
-    hostName: hostName,
-    ipAddr: '172.19.0.2',
+    hostName: '127.0.0.1',
+    ipAddr: 'reservation',
     port: {
       '$': 8080 ,
       '@enabled': 'true',
@@ -28,7 +28,7 @@ const client = new Eureka({
   eureka: {
     host: eurekaHost, 
     port: 8761, 
-    servicePath: '../Eureka',
+    servicePath: '/eureka',
   },
 });
 

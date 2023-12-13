@@ -13,7 +13,6 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-@CrossOrigin("*")
 @RequestMapping("/etudiant")
 @RequiredArgsConstructor
 public class EtudiantController {
@@ -21,6 +20,7 @@ public class EtudiantController {
     private final IEtudiantServices etudiantService;
 
     @PostMapping("/add")
+
     public Etudiant addEtudiant(@RequestBody Etudiant etudiant) {
         return etudiantService.addEtudiant(etudiant);
     }

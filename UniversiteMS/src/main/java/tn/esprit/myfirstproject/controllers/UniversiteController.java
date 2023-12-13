@@ -26,8 +26,8 @@ public class UniversiteController {
     Universite addUniversite(@RequestBody Universite c){return iUniversiteService.addUniversite(c);}
     @PutMapping("/modifieruniversite")
     Universite updateUniversite (@RequestBody Universite c){return iUniversiteService.updateUniversite(c);}
-    @DeleteMapping("/deleteUniversite")
-    public String deleteUniversite(@RequestParam long idUniversite ) {
+    @DeleteMapping("/deleteUniversite/{idUniversite}")
+    public String deleteUniversite(@PathVariable long idUniversite ) {
         iUniversiteService.deleteUniversite(idUniversite);
         return "universite supprimee";
     }
