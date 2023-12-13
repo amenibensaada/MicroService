@@ -21,9 +21,8 @@ import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.UUID;
-
-@RestController
 @CrossOrigin("*")
+@RestController
 @RequestMapping("/auth")
 @RequiredArgsConstructor
 public class AuthenticationController {
