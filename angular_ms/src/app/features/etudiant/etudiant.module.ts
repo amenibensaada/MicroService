@@ -7,14 +7,12 @@ import { EtudiantLayoutComponent } from './layout/etudiant-layout/etudiant-layou
 import { ReactiveFormsModule } from '@angular/forms';
 import { ListReservationComponent } from './list-reservation/list-reservation.component';
 
-
-
 @NgModule({
-  declarations: [ EtudiantProfileComponent, EtudiantLayoutComponent, ListReservationComponent,],
-  imports: [
-    CommonModule,
-    EtudiantRoutingModule,
-     ReactiveFormsModule
-  ]
+  declarations: [
+    EtudiantProfileComponent,
+    EtudiantLayoutComponent,
+    ListReservationComponent,
+  ],
+  imports: [CommonModule, EtudiantRoutingModule, ReactiveFormsModule],
 })
-export class EtudiantModule { }
+export class EtudiantModule {}

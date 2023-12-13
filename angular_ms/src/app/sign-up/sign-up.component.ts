@@ -9,7 +9,7 @@ import { UniversiteService } from '../services/servicesUniversite/universite.ser
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.css']
+  styleUrls: ['./sign-up.component.css'],
 })
 export class SignUpComponent {
   listUniversite: Universite[] = [];
@@ -17,17 +17,31 @@ export class SignUpComponent {
   registerForm = new FormGroup({
     nom: new FormControl('', [Validators.required, Validators.minLength(3)]),
     prenom: new FormControl('', [Validators.required, Validators.minLength(3)]),
-    cin: new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(8)]),
+    cin: new FormControl('', [
+      Validators.required,
+      Validators.minLength(8),
+      Validators.maxLength(8),
+    ]),
     image: new FormControl('', [Validators.required]),
-    universite: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    // universite: new FormControl('', [
+    //   Validators.required,
+    //   Validators.minLength(3),
+    // ]),
     dateNaissance: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required, Validators.minLength(6)])
+    password: new FormControl('', [
+      Validators.required,
+      Validators.minLength(6),
+    ]),
   });
 
   selectedFile: File | null = null;
 
-  constructor(private router: Router, private authService: AuthService, private universiteService: UniversiteService) { }
+  constructor(
+    private router: Router,
+    private authService: AuthService,
+    private universiteService: UniversiteService
+  ) {}
 
   ngOnInit(): void {
     this.getAllUniversites();
@@ -38,11 +52,12 @@ export class SignUpComponent {
   }
 
   getAllUniversites() {
-    this.universiteService.getAllUniversites().subscribe((data: Universite[]) => {
-      this.listUniversite = data;
-    });
+    this.universiteService
+      .getAllUniversites()
+      .subscribe((data: Universite[]) => {
+        this.listUniversite = data;
+      });
   }
-
 
   register() {
     const formData = new FormData();
@@ -56,8 +71,11 @@ export class SignUpComponent {
     addValueToFormData('nom', this.registerForm.get('nom')?.value);
     addValueToFormData('prenom', this.registerForm.get('prenom')?.value);
     addValueToFormData('cin', this.registerForm.get('cin')?.value);
-    addValueToFormData('universite', this.registerForm.get('universite')?.value);
-    addValueToFormData('dateNaissance', this.registerForm.get('dateNaissance')?.value);
+    // addValueToFormData('universite', this.registerForm.get('universite')?.value);
+    addValueToFormData(
+      'dateNaissance',
+      this.registerForm.get('dateNaissance')?.value
+    );
     addValueToFormData('email', this.registerForm.get('email')?.value);
     addValueToFormData('password', this.registerForm.get('password')?.value);
 
@@ -72,7 +90,7 @@ export class SignUpComponent {
           title: 'Inscription réussie',
           text: 'Vous pouvez maintenant vous connecter',
           showConfirmButton: false,
-          timer: 1500
+          timer: 1500,
         });
         this.router.navigate(['/login']);
       },
@@ -80,12 +98,10 @@ export class SignUpComponent {
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
-          text: 'Une erreur est survenue lors de l\'inscription',
-          footer: 'Veuillez réessayer'
+          text: "Une erreur est survenue lors de l'inscription",
+          footer: 'Veuillez réessayer',
         });
       }
     );
   }
 }
-
-

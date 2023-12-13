@@ -1,7 +1,7 @@
-C:\Users\ameni\Desktop\university\MicroServiceProject\ChambreMS\src\main\java\com\example\chambrems\respositories\ChambreRepo.java
-C:\Users\ameni\Desktop\university\MicroServiceProject\ChambreMS\src\main\java\com\example\chambrems\entities\Chambre.java
-C:\Users\ameni\Desktop\university\MicroServiceProject\ChambreMS\src\main\java\com\example\chambrems\ChambreMsApplication.java
-C:\Users\ameni\Desktop\university\MicroServiceProject\ChambreMS\src\main\java\com\example\chambrems\entities\TypeChambre.java
-C:\Users\ameni\Desktop\university\MicroServiceProject\ChambreMS\src\main\java\com\example\chambrems\Services\IChambreService.java
-C:\Users\ameni\Desktop\university\MicroServiceProject\ChambreMS\src\main\java\com\example\chambrems\RestController\ChambreRestController.java
-C:\Users\ameni\Desktop\university\MicroServiceProject\ChambreMS\src\main\java\com\example\chambrems\Services\ChambreServiceImpl.java
+C:\Users\ameni\Desktop\university\MS\MicroService\ChambreMS\src\main\java\com\example\chambrems\ChambreMsApplication.java
+C:\Users\ameni\Desktop\university\MS\MicroService\ChambreMS\src\main\java\com\example\chambrems\RestController\ChambreRestController.java
+C:\Users\ameni\Desktop\university\MS\MicroService\ChambreMS\src\main\java\com\example\chambrems\entities\TypeChambre.java
+C:\Users\ameni\Desktop\university\MS\MicroService\ChambreMS\src\main\java\com\example\chambrems\respositories\ChambreRepo.java
+C:\Users\ameni\Desktop\university\MS\MicroService\ChambreMS\src\main\java\com\example\chambrems\Services\IChambreService.java
+C:\Users\ameni\Desktop\university\MS\MicroService\ChambreMS\src\main\java\com\example\chambrems\entities\Chambre.java
+C:\Users\ameni\Desktop\university\MS\MicroService\ChambreMS\src\main\java\com\example\chambrems\Services\ChambreServiceImpl.java

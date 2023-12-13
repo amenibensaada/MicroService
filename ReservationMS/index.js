@@ -25,6 +25,7 @@ const reservationSchema = new mongoose.Schema({
   reservationDate: {
     type: Date,
     required: true,
+    default: Date.now
   },
   etudiantId: {
     type: [Number], 

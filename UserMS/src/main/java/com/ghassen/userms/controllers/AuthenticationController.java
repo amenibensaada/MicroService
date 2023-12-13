@@ -37,7 +37,7 @@ public class AuthenticationController {
                                                      @RequestParam("email") String email,
                                                      @RequestParam("password") String password,
                                                      @RequestParam("cin") Long cin,
-                                                     @RequestParam("universite") String universite,
+                                                    // @RequestParam("universite") String universite,
                                                      @RequestParam("dateNaissance") LocalDate dateNaissance,
                                                      @RequestParam("image") MultipartFile file) throws IOException {
         Etudiant etudiant = new Etudiant();
@@ -46,7 +46,7 @@ public class AuthenticationController {
         etudiant.setEmail(email);
         etudiant.setPassword(password);
         etudiant.setCin(cin);
-        etudiant.setUniversite(universite);
+      //  etudiant.setUniversite(universite);
         etudiant.setDateNaissance(dateNaissance);
 
         String originalFilename = file.getOriginalFilename();

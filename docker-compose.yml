@@ -34,7 +34,33 @@ services:
       - chambre_network
     environment:
       - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/
-
+  h2-database:
+    image: 1000kit/h2
+    container_name: db-h2 
+    environment:
+      - H2_USER=hana
+      - H2_PASSWORD=
+      - H2_CONSOLE_ENABLED=true
+      - H2_OPTIONS=-ifNotExists -webAllowOthers
+    ports:
+      - "8181:8181"
+    restart: unless-stopped
+  foyer:
+    container_name: foyer
+    image: "foyermsms"
+    build: .\FoyerMS
+    ports:
+      - "8016:8016" 
+    networks:
+      - chambre_network  
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:h2:mem:Foyer
+      - SPRING_DATASOURCE_USERNAME=hana
+      - SPRING_DATASOURCE_PASSWORD=
+      - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/
+    depends_on:
+      - eureka
+      - h2-database
   chambre:
     container_name: chambre
     image: chambre-ms
@@ -48,6 +74,28 @@ services:
     environment:
       - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-db:3306/chambre_Micro_Service?useUnicode=true&useJDBCCompliantTimezoneShift=true&createDatabaseIfNotExist=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - SPRING_JPA_SHOW_SQL=true
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.MySQLDialect
+    depends_on:
+      - mysql-db
+      - eureka
+
+  bloc:
+    container_name: bloc
+    image: bloc-ms
+    build:
+      context: .\BlocMS
+    restart: always
+    ports:
+      - "9564:9564"
+    networks:
+      - chambre_network
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-db:3306/microbloc2?useUnicode=true&useJDBCCompliantTimezoneShift=true&createDatabaseIfNotExist=true&useLegacyDatetimeCode=false&serverTimezone=UTC
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=root
       - SPRING_JPA_SHOW_SQL=true
@@ -130,6 +178,12 @@ services:
       - spring.cloud.gateway.routes[3].id=authMS
       - spring.cloud.gateway.routes[3].uri=http://user:8070
       - spring.cloud.gateway.routes[3].predicates[0]=Path=/auth/**
+      - spring.cloud.gateway.routes[4].id=blocMS
+      - spring.cloud.gateway.routes[4].uri=http://bloc:9564
+      - spring.cloud.gateway.routes[4].predicates[0]=Path=/bloc/**
+      - spring.cloud.gateway.routes[5].id=foyerMS
+      - spring.cloud.gateway.routes[5].uri=http://foyer:8016
+      - spring.cloud.gateway.routes[5].predicates[0]=Path=/foyer/**
 
     depends_on:
       - eureka
