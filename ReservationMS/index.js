@@ -6,8 +6,33 @@ require('dotenv').config();
 
 const app = express();
 const port = 3000;
+const hostName = (process.env.HOSTNAME || 'localhost')
+const eurekaHost = process.env.EUREKA_CLIENT_SERVICEURL_DEFAULTZONE || 'eureka';
 
 
+const client = new Eureka({
+  instance: {
+    app: 'reservation',
+    hostName: hostName,
+    ipAddr: '172.19.0.2',
+    port: {
+      '$': 8080 ,
+      '@enabled': 'true',
+    },
+    vipAddress: 'reservation',
+    dataCenterInfo: {
+      '@class': 'com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo',
+      name: 'MyOwn',
+    },
+  },
+  eureka: {
+    host: eurekaHost, 
+    port: 8761, 
+    servicePath: '../Eureka',
+  },
+});
+
+client.start();
 
 
 mongoose.connect(process.env.MONGODB_URL, {

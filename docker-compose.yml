@@ -104,6 +104,27 @@ services:
     depends_on:
       - mysql-db
       - eureka
+  universite:
+    container_name: universite
+    image: universite-ms
+    build:
+      context: .\universiteMS
+    restart: always
+    ports:
+      - "8017:8017"
+    networks:
+      - chambre_network
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-db:3306/microbloc2?useUnicode=true&useJDBCCompliantTimezoneShift=true&createDatabaseIfNotExist=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - SPRING_JPA_SHOW_SQL=true
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.MySQLDialect
+    depends_on:
+      - mysql-db
+      - eureka
 
   user:
     container_name: user
@@ -138,8 +159,12 @@ services:
       - chambre_network
     environment:
       - MONGODB_URL=mongodb://mongodb:27017/reservation
+      - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/
+
     depends_on:
       - mongodb
+      - eureka
+
   angular:
     container_name: angular
     image: angular-ms
@@ -184,6 +209,9 @@ services:
       - spring.cloud.gateway.routes[5].id=foyerMS
       - spring.cloud.gateway.routes[5].uri=http://foyer:8016
       - spring.cloud.gateway.routes[5].predicates[0]=Path=/foyer/**
+      - spring.cloud.gateway.routes[6].id=universiteMS
+      - spring.cloud.gateway.routes[6].uri=http://universite:8017
+      - spring.cloud.gateway.routes[6].predicates[0]=Path=/universite/**
 
     depends_on:
       - eureka
