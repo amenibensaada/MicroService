@@ -1,0 +1,27 @@
+name: Reservation API
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      mongo:
+        image: mongo:7
+        ports: [27017:27017]
+    defaults:
+      run:
+        working-directory: ReservationMS
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: ReservationMS/package-lock.json
+      - run: npm ci
+      - run: npm test
+      - run: npm run test:integration
+        env:
+          MONGODB_TEST_URL: mongodb://127.0.0.1:27017/reservation_ci
+      - run: docker build -t reservation-ms .
