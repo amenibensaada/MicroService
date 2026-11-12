@@ -2,7 +2,7 @@
 
 An academic team project for university housing: students, residences, rooms, blocks, universities and reservations. The repository combines an Angular interface, Spring Boot services, an Express reservation API, Eureka discovery and a gateway.
 
-**Ameni’s contribution:** the Node.js/Express reservation service, with MongoDB/Mongoose persistence and Eureka registration. The broader platform is team work. [Professional work and contact](https://amenibensaadaportfolio.netlify.app/?utm_source=github&utm_medium=profile&utm_campaign=personal_brand).
+**Ameni’s contribution:** the Node.js/Express reservation service, with MongoDB/Mongoose persistence and Eureka registration. The broader platform is team work. [Professional work and contact](https://amenibensaada.tn/?utm_source=github&utm_medium=profile&utm_campaign=personal_brand).
 
 ## Architecture
 
